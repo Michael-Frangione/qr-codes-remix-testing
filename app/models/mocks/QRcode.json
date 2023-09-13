@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Cool Code",
+    "shop": "quickstart-0af585fe.myshopify.com",
+    "productId": "gid://shopify/Product/8584300101953",
+    "productHandle": "the-hidden-snowboard",
+    "productVariantId": "gid://shopify/ProductVariant/46403510796609",
+    "destination": "product",
+    "scans": 2,
+    "createdAt": "2023-08-29T19:30:51.386Z",
+    "productDeleted": false,
+    "productTitle": "The Hidden Snowboard",
+    "productImage": "https://cdn.shopify.com/s/files/1/0815/7272/5057/products/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg?v=1692799528",
+    "productAlt": "The top view and bottom view of a snowboard. The top view is black with a singular peach cube.\n The bottom view has a graphic of a stack of blocks in a gradient from light blue, to pink to peach.",
+    "destinationUrl": "https://quickstart-0af585fe.myshopify.com/products/the-hidden-snowboard",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "title": "Cool Code 2",
+    "shop": "quickstart-0af585fe.myshopify.com",
+    "productId": "gid://shopify/Product/8584300101953",
+    "productHandle": "the-hidden-snowboard",
+    "productVariantId": "gid://shopify/ProductVariant/46403510796609",
+    "destination": "product",
+    "scans": 2,
+    "createdAt": "2023-08-29T19:30:51.386Z",
+    "productDeleted": false,
+    "productTitle": "The Hidden Snowboard",
+    "productImage": "https://cdn.shopify.com/s/files/1/0815/7272/5057/products/Main_c8ff0b5d-c712-429a-be00-b29bd55cbc9d.jpg?v=1692799528",
+    "productAlt": "The top view and bottom view of a snowboard. The top view is black with a singular peach cube.\n The bottom view has a graphic of a stack of blocks in a gradient from light blue, to pink to peach.",
+    "destinationUrl": "https://quickstart-0af585fe.myshopify.com/products/the-hidden-snowboard",
+    "image": ""
+  }
+]

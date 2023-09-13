@@ -1,0 +1,27 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+name = "qr-code-app"
+client_id = "69fadcd9222514a652665c261a117e25"
+application_url = "https://sweet-ordered-fy-ranking.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://sweet-ordered-fy-ranking.trycloudflare.com/auth/callback",
+  "https://sweet-ordered-fy-ranking.trycloudflare.com/auth/shopify/callback",
+  "https://sweet-ordered-fy-ranking.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2023-07"
+
+[pos]
+embedded = false
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "quickstart-0af585fe.myshopify.com"

@@ -1,0 +1,19 @@
+query GetProducts {
+  products(first: 10, reverse: true) {
+    edges {
+      node {
+        id
+        title
+        handle
+        resourcePublicationOnCurrentPublication {
+          publication {
+            name
+            id
+          }
+          publishDate
+          isPublished
+        }
+      }
+    }
+  }
+}

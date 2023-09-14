@@ -1,6 +1,8 @@
 import qrcode from "qrcode";
 import invariant from "tiny-invariant";
 import db from "../db.server";
+import GetProductsQuery from "./graphql/GetProductsQuery.graphql";
+import { json } from "@remix-run/node";
 
 export async function getQRCode(id, graphql) {
   const qrCode = await db.qRCode.findFirst({ where: { id } });
@@ -100,4 +102,16 @@ export function validateQRCode(data) {
   if (Object.keys(errors).length) {
     return errors;
   }
+}
+
+export async function getProducts(graphql) {
+  const response = await graphql(GetProductsQuery);
+
+  const {
+    data: { products },
+  } = await response.json();
+
+  const parsedProducts = products.edges.map((edge: any) => edge.node);
+
+  return parsedProducts;
 }

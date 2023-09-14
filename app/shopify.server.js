@@ -8,6 +8,14 @@ import {
 import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
 import { restResources } from "@shopify/shopify-api/rest/admin/2023-07";
 
+import { isDevelopment } from "./utilities/env";
+
+if (isDevelopment) {
+  (async () => {
+    await import("~/mocks");
+  })();
+}
+
 import prisma from "./db.server";
 
 const shopify = shopifyApp({

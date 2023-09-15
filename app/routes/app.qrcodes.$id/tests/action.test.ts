@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { redirect } from "@remix-run/node";
-import { testAction } from "test/utils";
+import { testAction, createFormData } from "test/utils";
 import { action } from "../action";
 
 const authenticateAdminMock = vi.hoisted(() => vi.fn());
@@ -56,15 +56,15 @@ describe("/app._index route loader", () => {
   });
 
   describe("create and update", () => {
-    const formData = new FormData();
-    formData.append("title", "dfsdfsdf");
-    formData.append("productId", "gid://shopify/Product/8584300101953");
-    formData.append(
-      "productVariantId",
-      "gid://shopify/ProductVariant/46403510796609"
-    );
-    formData.append("productHandle", "the-hidden-snowboard");
-    formData.append("destination", "product");
+    const mockFormData = {
+      title: "dfsdfsdf",
+      productId: "gid://shopify/Product/8584300101953",
+      productVariantId: "gid://shopify/ProductVariant/46403510796609",
+      productHandle: "the-hidden-snowboard",
+      destination: "product",
+    };
+
+    const formData = createFormData(mockFormData);
 
     it("runs create action and redirect to qrcode page", async () => {
       const response = await testAction(action, {

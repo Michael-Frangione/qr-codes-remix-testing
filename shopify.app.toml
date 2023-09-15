@@ -2,7 +2,7 @@
 
 name = "qr-code-app"
 client_id = "69fadcd9222514a652665c261a117e25"
-application_url = "https://textbook-economics-shares-adrian.trycloudflare.com"
+application_url = "https://shapes-transaction-conclusion-examples.trycloudflare.com"
 embedded = true
 
 [access_scopes]
@@ -11,9 +11,9 @@ scopes = "write_products,read_product_listings"
 
 [auth]
 redirect_urls = [
-  "https://textbook-economics-shares-adrian.trycloudflare.com/auth/callback",
-  "https://textbook-economics-shares-adrian.trycloudflare.com/auth/shopify/callback",
-  "https://textbook-economics-shares-adrian.trycloudflare.com/api/auth/callback"
+  "https://shapes-transaction-conclusion-examples.trycloudflare.com/auth/callback",
+  "https://shapes-transaction-conclusion-examples.trycloudflare.com/auth/shopify/callback",
+  "https://shapes-transaction-conclusion-examples.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

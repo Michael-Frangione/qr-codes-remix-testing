@@ -4,8 +4,6 @@ import { Box, Card, Layout, Page, Text, VerticalStack } from "@shopify/polaris";
 export function AdditionalPage() {
   const { products } = useLoaderData();
 
-  console.log(products);
-
   return (
     <Page>
       <ui-title-bar title="GraphQL Product Fetcher" />

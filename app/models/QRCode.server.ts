@@ -2,7 +2,7 @@ import qrcode from "qrcode";
 import invariant from "tiny-invariant";
 import db from "../db.server";
 import GetProductsQuery from "./graphql/GetProductsQuery.graphql";
-import { json } from "@remix-run/node";
+import SupplementQRCodeQuery from "./graphql/SupplementQRCodeQuery.graphql";
 
 export async function getQRCode(id, graphql) {
   const qrCode = await db.qRCode.findFirst({ where: { id } });
@@ -48,26 +48,11 @@ export function getDestinationUrl(qrCode) {
 async function supplementQRCode(qrCode, graphql) {
   const qrCodeImagePromise = getQRCodeImage(qrCode.id);
 
-  const response = await graphql(
-    `
-      query supplementQRCode($id: ID!) {
-        product(id: $id) {
-          title
-          images(first: 1) {
-            nodes {
-              altText
-              url
-            }
-          }
-        }
-      }
-    `,
-    {
-      variables: {
-        id: qrCode.productId,
-      },
-    }
-  );
+  const response = await graphql(SupplementQRCodeQuery, {
+    variables: {
+      id: qrCode.productId,
+    },
+  });
 
   const {
     data: { product },

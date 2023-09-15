@@ -1,0 +1,11 @@
+query SupplementQRCode($id: ID!) {
+  product(id: $id) {
+    title
+    images(first: 1) {
+      nodes {
+        altText
+        url
+      }
+    }
+  }
+}

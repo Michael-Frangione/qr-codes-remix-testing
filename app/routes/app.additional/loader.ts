@@ -7,8 +7,6 @@ export async function loader({ request }: LoaderArgs) {
 
   const products = await getProducts(admin.graphql);
 
-  console.log(products);
-
   return json({
     products,
   });

@@ -1,6 +1,5 @@
 import { installGlobals } from "@remix-run/node";
 import "@testing-library/jest-dom/vitest";
-import { vi } from "vitest";
 
 process.env.SCOPES = "write_products";
 process.env.SHOPIFY_APP_URL = "http://localhost:3000";
@@ -14,7 +13,3 @@ const globalForDevTools = globalThis as unknown as {
 };
 
 globalForDevTools.__REACT_DEVTOOLS_GLOBAL_HOOK__ = { isDisabled: true };
-
-vi.mock("react-i18next", () => ({
-  useTranslation: () => ({ t: (key: string) => key }),
-}));
